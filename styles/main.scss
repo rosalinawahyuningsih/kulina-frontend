@@ -1,0 +1,321 @@
+/*
+ * Style for kulina-frontend (preliminary test)
+ * Made by Prilivia Ruli Fatmawati
+ * Yogyakarta, 5 March 2018 2:37PM
+ */
+
+ // ---------------------- variable
+ $black : #000;
+ $dark-green : #653308;
+ $dark-orange : #f88118;
+ $grey : #717e81;
+ $green : #27ae60;
+ $light-grey : #f3f3f3;
+ $light-green : #6aca25;
+ $light-white : #fdfdfe;
+ $light-orange : #f99755;
+ $orange : #fd7314;
+ $red : #af3227;
+ $white : #fff;
+ // ----------------------------------------
+
+ // ---------------------- mixin'
+ @mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin transition($time){
+	transition: all $time*1s ease-in-out ;
+	-webkit-transition: all $time*1s ease-in-out ;
+	-moz-transition: all $time*1s ease-in-out ;
+	-o-transition: all $time*1s ease-in-out ;
+}
+
+@mixin radius($rad){
+	border-radius: $rad ;
+	-webkit-border-radius: $rad ;
+	-moz-border-radius: $rad ;
+	-o-border-radius: $rad ;
+}
+
+@mixin overlay($color,$opa) {
+  background-color: $color;
+  height: 100%;
+  opacity: $opa;
+  position: absolute;
+  width: 100%;
+}
+ // ----------------------------------------
+
+// ----------------------- fonts
+@font-face {
+  font-family: 'Roboto-Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src:
+  url('../fonts/Roboto-Regular.woff') format('woff'),
+  url('../fonts/Roboto-Regular.woff2') format('woff2'),
+  url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src:
+  url('../fonts/Roboto-Bold.woff') format('woff'),
+  url('../fonts/Roboto-Bold.woff2') format('woff2'),
+  url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+.robo-bold {
+  font-family: 'Roboto-Bold';
+}
+.robo-reg {
+  font-family: 'Roboto-Regular';
+}
+.robo-light {
+  font-family: 'Roboto-Light';
+}
+// font-color
+.gra {
+  color: $grey;
+}
+.gre {
+  color: $green;
+}
+.lig-gre {
+  color: $light-green;
+}
+.or {
+  color: $orange;
+}
+.red {
+  color: $red;
+}
+.wh {
+  color: $white;
+}
+// font-size
+.smaller {
+  font-size: 0.8em;
+}
+.normal {
+  font-size: 1em;
+}
+.baby-big {
+  font-size: 1.2em;
+}
+.big {
+  font-size: 1.5em;
+}
+.more-big {
+  font-size: 2.5em;
+}
+.bigger {
+  font-size: 3em;
+}
+
+// ----------------------------------------
+body {
+  box-sizing: border-box;
+  font-family: 'Roboto-Regular';
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+#hero-section {
+  @include flexbox();
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url(../image/hero-image.jpg);
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 20px;
+
+  nav {
+    width: 100%;
+  }
+}
+#second-section,#third-section {
+  padding: 60px 0;
+  &>div {
+    @include flexbox();
+    h3 {
+      flex: 1;
+      margin-bottom: 30px;
+      padding-right: 20px;
+    }
+    &>div {
+      flex: 3;
+      p {
+        color: $grey;
+      }
+    }
+  }
+}
+#third-section {
+  padding: 60px 0 20px;
+  background-color: $light-white;
+}
+.overlay {
+  background: linear-gradient(to right, $red, $orange);
+  height: 100%;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+.z-1 {
+  z-index: 1;
+}
+.btn-round {
+  @include radius(50%);
+}
+footer {
+  div.col-md-10 {
+    @include flexbox();
+    align-items: center;
+    border-top: 2px solid $light-grey;
+    justify-content: space-between;
+    padding: 20px 0 0;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0 0 0 5px;
+    li {
+      margin: 0 5px;
+      a {
+        @include transition(0.3);
+        color: $grey;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+a > .fa-facebook:hover {
+  color: #3b5999; }
+
+a > .fa-instagram:hover {
+  color: #fb3958; }
+
+a > .fa-twitter:hover {
+  color: #2ac6f7; }
+a > .fa-line:hover {
+  color: #00b900;
+}
+// ---------------------------------------- bootstrap reset
+nav.navbar {
+  padding: 0 2em;
+  position: absolute;
+  top: 2em;
+}
+.navbar {
+  justify-content: space-between;
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+  .navbar-nav {
+    li a {
+      @include transition(0.3);
+      font-family: 'Roboto-Bold', sans-serif;
+    }
+  }
+}
+.btn {
+  @include transition(0.3);
+  &.btn-warning {
+    background-color: $orange;
+    border: none;
+    color: $white;
+    padding: 5px 25px;
+    &:hover {
+      background-color: $light-orange;
+    }
+  }
+}
+.card {
+  align-items: center;
+  border: none;
+  box-shadow: 0px 0px 40px -10px $grey;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.navbar-dark .navbar-toggler {
+    color: $white;
+    border-color: transparent;
+  }
+// ---------------------------------------- flex
+.fle {
+  @include flexbox();
+}
+.alg-center {
+  align-items: center;
+}
+.smo {
+  // display: none;
+}
+// ---------------------------------------- responsive
+@media screen and (max-width: 768px) {
+  .smo {
+    display: block;
+  }
+  #second-section,#third-section {
+    padding: 30px 0;
+    &>div {
+      flex-direction: column;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  nav.navbar {
+    padding: 0 1em;
+  }
+  #second-section,#third-section {
+    &>div {
+      padding: 20px;
+    }
+  }
+  footer {
+    padding: 0 20px;
+    div.col-md-10 {
+      @include flexbox();
+      flex-direction: column;
+      padding: 20px 10px;
+    }
+    p {
+      text-align: center;
+      &.fle {
+        flex-direction: column;
+      }
+    }
+  }
+  .hd-480 {
+    display: none;
+  }
+}
