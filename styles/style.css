@@ -1,8 +1,4 @@
-/*
- * Style for kulina-frontend (preliminary test)
- * Made by Prilivia Ruli Fatmawati
- * Yogyakarta, 5 March 2018 2:37PM
- */
+
 @font-face {
   font-family: 'Roboto-Light';
   font-style: normal;
@@ -70,7 +66,7 @@ body {
   margin: 0;
   padding: 0; }
 
-#hero-section {
+#first_section {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -78,33 +74,33 @@ body {
   display: flex;
   align-items: center;
   background-attachment: fixed;
-  background-image: url(../image/hero-image.jpg);
+  background-image: url(../image/this-image.jpg);
   background-size: cover;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
   padding: 20px; }
-  #hero-section nav {
+  #first_section nav {
     width: 100%; }
 
-#second-section, #third-section {
+#second_section, #third_section {
   padding: 60px 0; }
-  #second-section > div, #third-section > div {
+  #second_section > div, #third_section > div {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
-    #second-section > div h3, #third-section > div h3 {
+    #second_section > div h3, #third_section > div h3 {
       flex: 1;
       margin-bottom: 30px;
       padding-right: 20px; }
-    #second-section > div > div, #third-section > div > div {
+    #second_section > div > div, #third_section > div > div {
       flex: 3; }
-      #second-section > div > div p, #third-section > div > div p {
+      #second_section > div > div p, #third_section > div > div p {
         color: #717e81; }
 
-#third-section {
+#third_section {
   padding: 60px 0 20px;
   background-color: #fdfdfe; }
 
@@ -219,15 +215,15 @@ nav.navbar {
   .smo {
     display: block; }
 
-  #second-section, #third-section {
+  #second_section, #third_section {
     padding: 30px 0; }
-    #second-section > div, #third-section > div {
+    #second_section > div, #third_section > div {
       flex-direction: column; } }
 @media screen and (max-width: 480px) {
   nav.navbar {
     padding: 0 1em; }
 
-  #second-section > div, #third-section > div {
+  #second_section > div, #third_section > div {
     padding: 20px; }
 
   footer {
