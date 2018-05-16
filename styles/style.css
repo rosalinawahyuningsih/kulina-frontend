@@ -1,46 +1,4 @@
 
-@font-face {
-  font-family: 'Roboto-Light';
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Roboto-Light.ttf") format("truetype"); }
-@font-face {
-  font-family: 'Roboto-Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.ttf") format("truetype"); }
-@font-face {
-  font-family: 'Roboto-Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.ttf") format("truetype"); }
-.robo-bold {
-  font-family: 'Roboto-Bold'; }
-
-.robo-reg {
-  font-family: 'Roboto-Regular'; }
-
-.robo-light {
-  font-family: 'Roboto-Light'; }
-
-.gra {
-  color: #717e81; }
-
-.gre {
-  color: #27ae60; }
-
-.lig-gre {
-  color: #6aca25; }
-
-.or {
-  color: #fd7314; }
-
-.red {
-  color: #af3227; }
-
-.wh {
-  color: #fff; }
-
 .smaller {
   font-size: 0.8em; }
 
@@ -61,47 +19,37 @@
 
 body {
   box-sizing: border-box;
-  font-family: 'Roboto-Regular';
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   padding: 0; }
 
 #first_section {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+  
   align-items: center;
   background-attachment: fixed;
   background-image: url(../image/this-image.jpg);
   background-size: cover;
-  flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  padding: 20px; }
+  padding: 0; }
   #first_section nav {
     width: 100%; }
 
 #second_section, #third_section {
-  padding: 60px 0; }
+  padding: 50px 0; }
   #second_section > div, #third_section > div {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; }
+     }
     #second_section > div h3, #third_section > div h3 {
-      flex: 1;
+      
       margin-bottom: 30px;
       padding-right: 20px; }
     #second_section > div > div, #third_section > div > div {
-      flex: 3; }
+       }
       #second_section > div > div p, #third_section > div > div p {
         color: #717e81; }
 
 #third_section {
-  padding: 60px 0 20px;
+  padding: 20px 0 20px;
   background-color: #fdfdfe; }
 
 .overlay {
